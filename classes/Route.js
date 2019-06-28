@@ -60,8 +60,8 @@ module.exports = class {
 
   getRouteLoad () {
     return this.route.reduce((result, node) => {
-      result += node.load.toFixed(3)
-      return +result
+      result += node.load
+      return +(result.toFixed(3))
     }, 0)
   }
 
