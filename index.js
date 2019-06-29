@@ -13,7 +13,7 @@ const SAVE_DATA = 'save_data' in arguments
 
 const fs = require('fs')
 const path = require('path')
-const testsPath = path.resolve('./tests')
+const testsPath = path.resolve('./generated-data')
 
 const Node = require('./classes/Node')
 const Route = require('./classes/Route')
