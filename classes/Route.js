@@ -55,7 +55,7 @@ module.exports = class {
       result += getDistance(distances, prev, cur)
       return cur
     })
-    return +(result).toFixed(3)
+    return +(result.toFixed(3))
   }
 
   getRouteLoad () {

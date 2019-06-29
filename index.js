@@ -163,7 +163,7 @@ programTime = Date.now() - programTime
 
 if (SHOW_ROUTES) {
   routes.forEach((route, i) => {
-    console.log(`Маршрут #${++i}: ${route.toPrint()}\n`)
+    console.log(`Route #${++i}: ${route.toPrint()}\n`)
     console.table(route.toPrintTable(distances))
     console.log(`\n===================\n`)
   })
@@ -171,10 +171,10 @@ if (SHOW_ROUTES) {
 
 console.log(`Количество точек: ${nodesAmount}\n`)
 console.table({
-  minNodeLoad,
-  maxNodeLoad,
-  minDistance,
-  maxDistance,
+  'Min load': minNodeLoad,
+  'Max load': maxNodeLoad,
+  'Min distance': minDistance,
+  'Max distance': maxDistance,
 })
-console.log(`Время выполнения программы: ${programTime}мс`)
-console.log(`Найдено маршрутов: ${routes.length}\n`)
+console.log(`Program execution time: ${programTime}мс`)
+console.log(`Routes found: ${routes.length}\n`)
