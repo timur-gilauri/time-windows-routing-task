@@ -4,6 +4,5 @@ module.exports = class Node {
     this.load = load
     this.open = open
     this.close = close
-    this.inRoute = false
   }
 }
