@@ -102,10 +102,10 @@ function calcRoute (route) {
   }
 
   // Получаем список доступных окон
-  let closeTimeArr = getClosestTimeWindowsForRoute(groupedNodes, route, distances, serviceTime)
+  let closestTimeWindows = getClosestTimeWindowsForRoute(groupedNodes, route, distances, serviceTime)
 
   // Перебираем каждую группу
-  for (let timeToSearchNext of closeTimeArr) {
+  for (let timeToSearchNext of closestTimeWindows) {
     // Если машина пуста или имеет недостаточно товара для обслуживания минимальной потребности - выходим, маршрут построен
     if (route.car.isEmpty() || !route.car.hasEnoughLoadToServe(minNodeLoad)) {
       break
